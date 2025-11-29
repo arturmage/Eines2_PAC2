@@ -1,0 +1,127 @@
+@use "../variables" as v;
+
+@layer pages {
+  .page--article .page__main {
+    padding-block: v.space("lg");
+  }
+
+  .article-page {
+    background-color: transparent;
+  }
+
+  .article-hero {
+    background-color: hwb(210 96% 0%);
+    padding-block: clamp(3rem, 10svh, 5rem);
+    margin-bottom: v.space("xl");
+  }
+
+  .article-hero__inner {
+    max-width: 60rem;
+    margin-inline: auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: v.space("md");
+  }
+
+  .article-hero__image img {
+    max-width: 6rem;
+    border-radius: v.$radius-md;
+  }
+
+  .article-hero__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+  }
+
+  .article-hero__title {
+    font-family: v.$font-family-heading;
+    font-size: clamp(2rem, 3.2vw, 2.6rem);
+    margin: 0;
+  }
+
+  .article-hero__meta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .article-body {
+    margin-block: v.space("xl");
+    display: flex;
+    flex-direction: column;
+    gap: v.space("xl");
+  }
+
+  .article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+    gap: v.space("lg");
+    align-items: flex-start;
+  }
+
+  .article-layout__lede {
+    font-family: v.$font-family-heading;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .article-layout__col--right p {
+    margin-block: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .article-layout__col--right blockquote {
+    margin-block: 1.25rem;
+    font-style: italic;
+    border-left: 4px solid v.$color-accent;
+    padding-left: 1rem;
+  }
+
+  .article-layout__col--right:has(blockquote) {
+    border-top: 1px solid v.$color-border-subtle;
+    padding-top: v.space("md");
+  }
+
+  .article-body__feature img {
+    width: 100%;
+    border-radius: v.$radius-lg;
+    display: block;
+  }
+
+  .article-body__section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-body__section p {
+    margin-block: 0.75rem;
+  }
+
+  .article-body__section ul {
+    margin-block: 0.75rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .article-body__sidebar {
+    padding: v.space("md");
+    border-radius: v.$radius-md;
+    background-color: hwb(40 95% 10%);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 48rem) {
+    .article-layout {
+      grid-template-columns: 1fr;
+      gap: v.space("md");
+    }
+
+    .article-layout__lede {
+      font-size: 1.2rem;
+    }
+  }
+}

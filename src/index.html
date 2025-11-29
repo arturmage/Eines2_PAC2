@@ -1,27 +1,58 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ca">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <title>Jornades de Cuina Tradicional · Inici</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Helloooo, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+  <body class="site-body">
+    <include src="./views/header-home.html"></include>
+
+    <main class="page page--home">
+      <section class="home-poster container">
+        <p class="home-poster__badge">1a edició · 2026</p>
+
+        <h1 class="home-poster__title">
+          Jornades de Cuina Tradicional Catalana
+        </h1>
+
+        <p class="home-poster__subtitle">
+          Tres dies de xerrades, tallers i tastos per recuperar els sabors de
+          sempre i descobrir nous formats per explicar-los.
+        </p>
+
+        <p class="home-poster__info">
+          12–14 d’abril · Centre Cívic del Carme · Reus
+        </p>
+
+        <nav class="home-poster__nav" aria-label="Pàgines del lloc">
+          <a href="speakers.html" class="btn btn-primary btn-lg">
+            Ponents i xerrades
+          </a>
+          <a href="article.html" class="btn btn-outline-secondary btn-lg">
+            Què són les jornades?
+          </a>
+          <a href="info.html" class="btn btn-outline-secondary btn-lg">
+            Programa i inscripcions
+          </a>
+        </nav>
+
+        <figure class="home-poster__image">
+          <img
+            src="./assets/images/escudella.png"
+            alt="Taula amb plats de cuina tradicional catalana"
+          />
+        </figure>
+
+        <p class="home-poster__footer-text">
+          Organitza: Ajuntament de Reus · Col·labora: Associació de Cuina
+          Tradicional del Camp de Tarragona.
+        </p>
+      </section>
+    </main>
+
     <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/main.js"></script>
   </body>
 </html>

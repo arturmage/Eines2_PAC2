@@ -1,0 +1,80 @@
+@use "../variables" as v;
+
+@layer pages {
+  .page--speakers .page__main {
+    padding-block: v.space("lg");
+  }
+
+  .speakers {
+    &__intro {
+      margin-bottom: v.space("lg");
+    }
+  }
+
+  .speakers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.space("lg");
+    margin-block: v.space("lg");
+  }
+
+  /* mobile: 1 column */
+  .speaker-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: v.space("md");
+    border-radius: v.$radius-md;
+    background-color: v.$color-surface;
+    box-shadow: v.$shadow-soft;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+  &__photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: v.$radius-md;
+    margin-bottom: 0.75rem;
+  }
+
+
+    &__name {
+      font-size: 1.1rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &__role {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    &__bio {
+      margin: 0.5rem 0 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  /* >= 48rem: two columns */
+  @media (min-width: 48rem) {
+    .speaker-card {
+      flex: 1 1 calc(50% - v.space("lg"));
+      max-width: calc(50% - v.space("lg"));
+    }
+  }
+
+  /* >= 72rem: 3 columns */
+  @media (min-width: 72rem) {
+    .speaker-card {
+      flex: 1 1 calc(33.333% - v.space("lg"));
+      max-width: calc(33.333% - v.space("lg"));
+    }
+  }
+}
