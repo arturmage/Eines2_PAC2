@@ -10,31 +10,30 @@
   }
 
   .article-hero {
-    background-color: hwb(210 96% 0%);
-    padding-block: clamp(3rem, 10svh, 5rem);
+    background-color: hwb(210deg 96% 0%);
     margin-bottom: v.space("xl");
+    padding-block: clamp(3rem, 10svh, 5rem);
   }
 
   .article-hero__inner {
-    max-width: 60rem;
-    margin-inline: auto;
-    text-align: center;
-
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: v.space("md");
+    margin-inline: auto;
+    max-width: 60rem;
+    text-align: center;
   }
 
   .article-hero__image img {
-    max-width: 6rem;
     border-radius: v.$radius-md;
+    max-width: 6rem;
   }
 
   .article-hero__kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
     font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
   .article-hero__title {
@@ -49,17 +48,17 @@
   }
 
   .article-body {
-    margin-block: v.space("xl");
     display: flex;
     flex-direction: column;
     gap: v.space("xl");
+    margin-block: v.space("xl");
   }
 
   .article-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
-    gap: v.space("lg");
     align-items: flex-start;
+    display: grid;
+    gap: v.space("lg");
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
   }
 
   .article-layout__lede {
@@ -70,14 +69,14 @@
   }
 
   .article-layout__col--right p {
-    margin-block: 0.75rem;
     line-height: 1.7;
+    margin-block: 0.75rem;
   }
 
   .article-layout__col--right blockquote {
-    margin-block: 1.25rem;
-    font-style: italic;
     border-left: 4px solid v.$color-accent;
+    font-style: italic;
+    margin-block: 1.25rem;
     padding-left: 1rem;
   }
 
@@ -87,9 +86,9 @@
   }
 
   .article-body__feature img {
-    width: 100%;
     border-radius: v.$radius-lg;
     display: block;
+    width: 100%;
   }
 
   .article-body__section h2 {
@@ -107,17 +106,17 @@
   }
 
   .article-body__sidebar {
-    padding: v.space("md");
+    background-color: hwb(40deg 95% 10%);
     border-radius: v.$radius-md;
-    background-color: hwb(40 95% 10%);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 5%);
     font-size: 0.95rem;
+    padding: v.space("md");
   }
 
-  @media (max-width: 48rem) {
+  @media (width <= 48rem) {
     .article-layout {
-      grid-template-columns: 1fr;
       gap: v.space("md");
+      grid-template-columns: 1fr;
     }
 
     .article-layout__lede {

@@ -20,50 +20,48 @@
 
   /* mobile: 1 column */
   .speaker-card {
-    flex: 1 1 100%;
-    max-width: 100%;
-    padding: v.space("md");
-    border-radius: v.$radius-md;
     background-color: v.$color-surface;
+    border-radius: v.$radius-md;
     box-shadow: v.$shadow-soft;
-
     display: flex;
+    flex: 1 1 100%;
     flex-direction: column;
     gap: 0.75rem;
+    max-width: 100%;
+    padding: v.space("md");
 
   &__photo {
-    width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
-    object-position: center;
-
     border-radius: v.$radius-md;
     margin-bottom: 0.75rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
   }
 
 
     &__name {
-      font-size: 1.1rem;
-      margin: 0;
-      display: flex;
       align-items: center;
+      display: flex;
+      font-size: 1.1rem;
       gap: 0.5rem;
+      margin: 0;
     }
 
     &__role {
-      margin: 0;
       font-size: 0.95rem;
+      margin: 0;
       opacity: 0.85;
     }
 
     &__bio {
-      margin: 0.5rem 0 0;
       font-size: 0.95rem;
+      margin: 0.5rem 0 0;
     }
   }
 
   /* >= 48rem: two columns */
-  @media (min-width: 48rem) {
+  @media (width >= 48rem) {
     .speaker-card {
       flex: 1 1 calc(50% - v.space("lg"));
       max-width: calc(50% - v.space("lg"));
@@ -71,7 +69,7 @@
   }
 
   /* >= 72rem: 3 columns */
-  @media (min-width: 72rem) {
+  @media (width >= 72rem) {
     .speaker-card {
       flex: 1 1 calc(33.333% - v.space("lg"));
       max-width: calc(33.333% - v.space("lg"));

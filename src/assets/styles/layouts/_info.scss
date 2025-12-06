@@ -1,16 +1,14 @@
 @use "../variables" as v;
 
 @layer pages {
-
   .info-hero {
-    min-height: 60dvh;
-    display: flex;
     align-items: center;
-    justify-content: center;
-
     background: color(display-p3 0.98 0.94 0.88);
     border-radius: v.$radius-lg;
+    display: flex;
+    justify-content: center;
     margin-bottom: v.space("lg");
+    min-height: 60dvh;
   }
 
   .info-hero__inner {
@@ -26,10 +24,10 @@
   }
 
   .info-hero__kicker {
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
     font-size: 0.8rem;
+    letter-spacing: 0.12em;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
   }
 
   @container (max-width: 32rem) {
@@ -51,10 +49,10 @@
   }
 
   .info-contact {
-    background-color: hwb(36 94% 10%);
-    padding-block: clamp(2rem, 8cqmin, 4rem);
+    background-color: hwb(36deg 94% 10%);
     border-radius: v.$radius-lg;
     margin-bottom: v.space("xl");
+    padding-block: clamp(2rem, 8cqmin, 4rem);
   }
 
   .info-contact__inner {
